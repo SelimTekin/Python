@@ -1,4 +1,3 @@
-from hashlib import new
 from twitterUserInfo import username, password
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
