@@ -1,5 +1,2 @@
-username = "de.neme5373"
-password = "dnm123"
-
-# de.neme5373
-# dnm123
+username = "" # Kullanıcı adı, eposta veya telefon no giriniz(Ben kullanıcı adı kullandım)
+password = "" # şifre giriniz
