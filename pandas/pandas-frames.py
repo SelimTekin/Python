@@ -29,8 +29,8 @@ df = pd.DataFrame(list, index = [1, 2, 3, 4], columns = ['Name', 'Grade'], dtype
         # 3   Çınar      80.0
 
 df = pd.DataFrame(dict, index = ["1200", "50", "50", "24"]) # Aynı sadece indekslerin yerinde öğrenci nolar yazıyor
-df = pd.DataFrame(dict_list) # aynı
-df = pd.DataFrame(dict_list, index = ["1200", "50", "50", "24"]) # aynı
+# df = pd.DataFrame(dict_list) # aynı
+# df = pd.DataFrame(dict_list, index = ["1200", "50", "50", "24"]) # aynı
 print(df)
 
 # s1 = pd.Series([3, 2, 0, 1])
