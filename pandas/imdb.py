@@ -1,4 +1,4 @@
-import numbers
+import re
 import pandas as pd
 
 df = pd.read_csv("imdb.csv")
@@ -41,38 +41,42 @@ result = df[df["RATING"] >= 8.0][["movie name\r\n", "RATING"]].head(50)
 
 # 12- Yayın tarihi 2014 ile 2015 arasında olan filmlerin isimlerini getririniz.
 i = 0
-years = {"movies": []}
+years = {"movies": [], "years":[]}
 for i in range(len(df["Year"])):
-    year = int(df["Year"][i])
-
     # print(type(year)) # int olduğundan emin olduk
     # if year < 0:     # yıllar negatif onu anladık
     #     print(year)
 
-    if ((year <= -2010) & (year >= -2019)):
+    # tarihlerde "()I-" karakterleri de var o yüzden onları sildik
+    year = int(df["Year"][i].replace("-", "").replace("(", "").replace(")", "").replace("I", "").replace(" ", ""))
+
+    if ((year >= 2014) & (year <= 2015)):
         years["movies"].append(df.loc[i]["movie name\r\n"])
+        years["years"].append(df.loc[i]["Year"].replace("-", ""))
 
     i += 1
 result = pd.DataFrame(years)
+
+# Hocanın yaptığı
+# Bunda veriler string olduğu için sayısal karşılaştırma yapılamıyor. Üstte kendim sayısal verilere çevirip dictionary'e attım ve öyle yazdırdım.
 # result = df[(df["Year"] >= 2014) &(df["Year"] <= 2015)][["movie name\r\n", "Year"]]
 # result = type(df["Year"][0]) # str
 
 # 13- Değerlendirme sayısı (votes) 100.000'den büyük ya da imdb puanı 8 ile 9 arasında olan filmleri listeleyiniz.
-# i = 0
-# votes = {"movies": [], "votes": []}
-# for i in range(len(df["votes"])):
-#     vote = df["votes"][i].replace(",", "")
-#     rating = df["RATING"][i]
-#     if ((int(vote) > 100000)) | ((rating >= 8) & (rating <= 9)):
-#         votes["movies"].append(df.loc[i]["movie name\r\n"])
-#         votes["votes"].append(df.loc[i]["votes"])
+i = 0
+votes = {"movies": [], "votes": []}
+for i in range(len(df["votes"])):
+    vote = df["votes"][i].replace(",", "")
+    rating = df["RATING"][i]
+    if ((int(vote) > 100000)) | ((rating >= 8) & (rating <= 9)):
+        votes["movies"].append(df.loc[i]["movie name\r\n"])
+        votes["votes"].append(df.loc[i]["votes"])
 
-#     i += 1
-# result = pd.DataFrame(votes)
+    i += 1
+result = pd.DataFrame(votes)
 
 # Hocanın yaptığı
 # Bunda veriler string olduğu için sayısal karşılaştırma yapılamıyor. Üstte kendim sayısal verilere çevirip dictionary'e attım ve öyle yazdırdım.
 # result = [(df["votes"] > 100000) | ((df["RATING"] >= 8) & (df["RATING"] <= 9))][["movie name\r\n", "votes"]]
 
-# print(df.columns)
 print(result)
