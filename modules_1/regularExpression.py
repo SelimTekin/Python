@@ -12,14 +12,14 @@ result = len(result)
 
 #re.split()
 result = re.split(" ", str)
-result = re.split("T", str) # T'den böler fakat T'yi yazmaz
+result = re.split("T", str) # T'den böler, T'yi yazmaz
 
 # re.sub()
 result = re.sub(" ", "-",str) # boşlukları "-" ifadesi ile değiştirir
 result = re.sub("\s","-", str) # aynı
 
 # re.search()
-result = re.search('Selim',str) #re.Match objesi döndürdü çıktıda span=(0,5) ifadesi de yer alır.(pattern'in(Selim) bulunduğu konum)
+result = re.search('Selim',str) # re.Match objesi döndürdü çıktıda span=(0,5) ifadesi de yer alır.(pattern'in(Selim) bulunduğu konum)
 # result = result.span() # Çıktı: (0, 5)
 # result = result.start() # Çıktı: 0
 # result = result.end() # Çıktı: 5

@@ -20,7 +20,7 @@ plt.ylabel("y label") # y ekseni adı
 """
 
 """
-x = np.linspace(0, 2, 100) # linespace -> 0 ile 2 arasında 100 eşit parçaya böler
+x = np.linspace(0, 2, 100) # linspace -> 0 ile 2 arasında 100 eşit parçaya böler
 
 plt .plot(x, x, label="linear", color="red") # label -> çizginin adı
 plt .plot(x, x**2, label="quadratic", color="yellow")                   # Tek bir grafik ile 3 tane çizgi
