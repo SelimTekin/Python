@@ -30,7 +30,7 @@ result = df.index # Çıktı: RangeIndex(start=0, stop=5, step=1)
 result = len(df.index) # kaç index olduğu yazar
 result = df.info # df hakkında bilgi verir (satır ve kolonları da yazar)
 
-result = df.sort_values("Column2") # sayıların sırasına göre yazılır # varsayılna artan (ascending = True)
+result = df.sort_values("Column2") # sayıların sırasına göre yazılır # varsayılan artan (ascending = True)
 result = df.sort_values("Column3") # alfabetik sıralanır
 result = df.sort_values("Column3", ascending = False) # azalan sıralanır
 
