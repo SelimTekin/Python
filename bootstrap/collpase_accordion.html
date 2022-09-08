@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- integrity benzersiz anahtar oluyor. Zararlı bir script örneği eklendiğinde sadece ben etkilenirim-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body class="w-75 mx-auto my-4">
+    <p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#content">
+            Button
+        </button>
+
+        <a href="#content" class="btn btn-primary" data-bs-toggle="collapse">Link</a>
+    </p>
+
+    <div id="content" class="collapse show">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non provident accusantium reprehenderit temporibus
+            odio alias animi dolorem quibusdam, inventore, tempora impedit aliquam, saepe doloribus nobis eius ullam
+            libero iusto illum.
+        </p>
+    </div>
+
+    <br><br>
+
+    <div id="accordion">
+
+        <div class="card mb-1">
+
+            <div class="card-header">
+
+                <a href="#collapseOne" class="card-link" data-bs-toggle="collapse">item 1</a>
+
+            </div>
+
+            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+
+                <div class="card-body">
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, deserunt ab. Nemo
+                        pariatur nesciunt, labore veritatis exercitationem neque, accusamus fugiat dolorum rerum eveniet
+                        numquam repudiandae ea mollitia. Hic, voluptas iste.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card mb-1">
+
+            <div class="card-header">
+
+                <a href="#collapseTwo" class="card-link" data-bs-toggle="collapse">item 2</a>
+
+            </div>
+
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+
+                <div class="card-body">
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, deserunt ab. Nemo
+                        pariatur nesciunt, labore veritatis exercitationem neque, accusamus fugiat dolorum rerum eveniet
+                        numquam repudiandae ea mollitia. Hic, voluptas iste.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card mb-1">
+
+            <div class="card-header">
+
+                <a href="#collapseThree" class="card-link" data-bs-toggle="collapse">item 3</a>
+
+            </div>
+
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+
+                <div class="card-body">
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, deserunt ab. Nemo
+                        pariatur nesciunt, labore veritatis exercitationem neque, accusamus fugiat dolorum rerum eveniet
+                        numquam repudiandae ea mollitia. Hic, voluptas iste.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
