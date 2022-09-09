@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrollspy</title>
+    <!-- integrity benzersiz anahtar oluyor. Zararlı bir script örneği eklendiğinde sadece ben etkilenirim-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <style>
+            body{
+                position: relative;
+            }
+        </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home" class="bg-success" style="padding-top: 400px;padding-bottom: 400px;">
+        <h1>Home</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime repellat rerum ratione aspernatur quam
+            reprehenderit, maiores magnam labore optio aliquid officiis rem velit doloremque dignissimos minus? Dolore,
+            quisquam provident!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque cum dicta fuga aspernatur, quis
+            corporis, reprehenderit veniam ea unde esse. Assumenda quibusdam maxime, non vero molestiae laudantium
+            aspernatur omnis.
+        </p>
+    </div>
+    <div id="about" class="bg-danger" style="padding-top: 400px;padding-bottom: 400px;">
+        <h1>About</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime repellat rerum ratione aspernatur quam
+            reprehenderit, maiores magnam labore optio aliquid officiis rem velit doloremque dignissimos minus? Dolore,
+            quisquam provident!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque cum dicta fuga aspernatur, quis
+            corporis, reprehenderit veniam ea unde esse. Assumenda quibusdam maxime, non vero molestiae laudantium
+            aspernatur omnis.
+        </p>
+    </div>
+    <div id="services" class="bg-warning" style="padding-top: 400px;padding-bottom: 400px;">
+        <h1>Services</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime repellat rerum ratione aspernatur quam
+            reprehenderit, maiores magnam labore optio aliquid officiis rem velit doloremque dignissimos minus? Dolore,
+            quisquam provident!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque cum dicta fuga aspernatur, quis
+            corporis, reprehenderit veniam ea unde esse. Assumenda quibusdam maxime, non vero molestiae laudantium
+            aspernatur omnis.
+        </p>
+    </div>
+    <div id="contact" class="bg-info" style="padding-top: 400px;padding-bottom: 400px;">
+        <h1>Contact</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime repellat rerum ratione aspernatur quam
+            reprehenderit, maiores magnam labore optio aliquid officiis rem velit doloremque dignissimos minus? Dolore,
+            quisquam provident!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque cum dicta fuga aspernatur, quis
+            corporis, reprehenderit veniam ea unde esse. Assumenda quibusdam maxime, non vero molestiae laudantium
+            aspernatur omnis.
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
