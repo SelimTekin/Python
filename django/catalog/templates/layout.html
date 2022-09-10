@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catalog application</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--static haricinde başka bir isim veremezsin klasöre-->
+</head>
+<body>
+    {% block content %} <!--değiştirilebilir bir içerik olduğunu belirtiyor (block'un renkli görünmesi için jinja uzantısını indirmen gerekiyor)-->
+    {% endblock %}
+</body>
+</html>
