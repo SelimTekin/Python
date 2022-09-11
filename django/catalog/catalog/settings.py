@@ -32,7 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig', # biz ekledik (pages klasörü altındaki apps'in iççindeki PagesConfig)
+    'pages.apps.PagesConfig', # biz ekledik (pages klasörü altındaki apps'in iççindeki PagesConfig) (sadece pages yazsan da olur)
+    'movies', # böyle mesela
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
