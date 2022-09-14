@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views # dosya aynı klasörde olduğu için . (nokta) yazdık
+from . import views # dosya aynı dizinde olduğu için . (nokta) yazdık
 
 # http://127.0.0.1:8000/
 urlpatterns = [

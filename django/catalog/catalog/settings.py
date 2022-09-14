@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig', # biz ekledik (pages klasörü altındaki apps'in iççindeki PagesConfig) (sadece pages yazsan da olur)
+    'pages.apps.PagesConfig', # biz ekledik (pages klasörü altındaki apps'in içindeki PagesConfig) (sadece pages yazsan da olur)
     'movies', # böyle mesela
     'django.contrib.admin',
     'django.contrib.auth',
@@ -106,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'tr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Istanbul'
 
 USE_I18N = True
 
