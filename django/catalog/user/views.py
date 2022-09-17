@@ -1,12 +1,56 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth.models import User
+from django.contrib import auth # login işlemlerini kontrol etmeek için bunu kullanıyoruz
 
 # Create your views here.
 
 def login(request):
-    return render(request, 'user/login.html')
+
+    if request.method == 'POST': # Eğer talep POST değilse demek ki sayfa ilk defa çağırılıyor
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+        if user is not None: # kullanıcı eğer varsa sessionid kontrolü yapmamız lazım
+            auth.login(request, user) # sessionid oluşturduk
+            print('login başarılı')
+            return redirect('index')
+        else:
+            print('Kullanıcı adı veya parola yanlış')
+            return redirect('login')
+    else: # sayfa ilk defa çağırılmıyorsa
+        return render(request, 'user/login.html')
 
 def register(request):
-    return render(request, 'user/register.html')
+    if request.method == 'POST':
+
+        # get form values
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        repassword = request.POST['repassword']
+
+        if password == repassword:
+            # Username
+            if User.objects.filter(username = username).exists():
+                print('Bu kullanıcı adı daha önce alınmış')
+                return redirect('register')
+            else:
+                if User.objects.filter(email = email).exists():
+                    print('Bu email daha önce alınmış')
+                    return redirect('register')
+                else:
+                    # her şey güzel
+                    user = User.objects.create_user(username=username,password=password, email=email) # create_superuser deseydik admin user'ı oluşturacaktı
+                    user.save()
+                    print('Kullanıcı oluşturuldu.')
+                    return redirect('login')
+
+        else:
+            print('parolalar eşleşmiyor')
+            return redirect('register')
+    else:
+        return render(request, 'user/register.html')
 
 def logout(request):
     return render(request, 'user/logout.html')

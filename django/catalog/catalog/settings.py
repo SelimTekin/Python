@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'movies', # böyle mesela
     'user',
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', # user modeli
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
