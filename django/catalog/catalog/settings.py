@@ -131,3 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+# messages framework
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger', # error yerine danger class'ı kullanılacak mesaj verildiğinde (error background'u beyaz olduğu için böyle yaptık benim anladığım)
+    # messages.INFO: '',
+    # 50: 'critical',
+}
